@@ -10,9 +10,10 @@
 <body>
   <!-- Main -->
   <div class="todo_box p-2">
+    <h2 class="text-center text-color-info">To-Do List</h2>
     <div class="input-group mb-3">
-      <input id="input_text" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-      <button id="new-item-add" class="btn btn-primary text-white btn-outline-success" type="button" id="button-addon2">+</button>
+      <input id="input_text" type="text" class="form-control" placeholder="New task..." aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button id="new-item-add" class="btn btn-primary text-white btn-outline-success" type="button" id="button-addon2">Enter</button>
     </div>
 
     <div class="card" style="width: 100%;">
@@ -22,7 +23,15 @@
             <input class="form-check-input me-2 line-through" type="checkbox" value="" id="flexCheckDefault">
             <p class="mb-0 text_add">Welcome to the To-Do list</p>
           </div>
-          <button class="btn btn-danger delate_items">X</button>
+          <button class="btn btn-danger delate_items rounded-circle">X</button>
+        </li>
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="item_box d-flex align-items-center">
+            <input class="form-check-input me-2 line-through" type="checkbox" value="" id="flexCheckDefault">
+            <p class="mb-0 text_add">"Enter" works to</p>
+          </div>
+          <button class="btn btn-danger delate_items rounded-circle">X</button>
         </li>
       </ul>
     </div>

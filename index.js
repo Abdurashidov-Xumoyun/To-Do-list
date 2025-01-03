@@ -27,8 +27,10 @@ for (let i = 0; i < lineCheckboxes.length; i++) {
   lineCheckboxes[i].addEventListener("change", function(e) {
     if (lineCheckboxes[i].checked) {
       e.target.nextElementSibling.style.textDecoration = "line-through";
+      e.target.nextElementSibling.style.color = "#8c8c8c"
     } else {
       e.target.nextElementSibling.style.textDecoration = "none";
+      e.target.nextElementSibling.style.color = "black"
     }
   });
 }
@@ -43,9 +45,9 @@ document.addEventListener("keydown", function (e) {
 
 function addItem(e) {
   e.preventDefault();
-  let ItemValue = inputText.value;
+  let ItemValue = inputText.value.trim();
   
-  if (inputText.value !== "") {
+  if (inputText.value.trim() !== "") {
     let li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center";
     itemBox.appendChild(li);
@@ -65,15 +67,17 @@ function addItem(e) {
     paragraf.appendChild(document.createTextNode(ItemValue));
   
     let newBotton = document.createElement("button");
-    newBotton.className = "btn btn-danger delate_items";
+    newBotton.className = "btn btn-danger delate_items rounded-circle";
     newBotton.innerHTML = "X";
     li.appendChild(newBotton);
     
     newInput.addEventListener("change", function(e) {
      if (newInput.checked) {
-       e.target.nextElementSibling.style.textDecoration = "line-through";
+      e.target.nextElementSibling.style.textDecoration = "line-through";
+      e.target.nextElementSibling.style.color = "#8c8c8c"
      } else {
-       e.target.nextElementSibling.style.textDecoration = "none";
+      e.target.nextElementSibling.style.textDecoration = "none";
+      e.target.nextElementSibling.style.color = "black"
      }
      });
   
